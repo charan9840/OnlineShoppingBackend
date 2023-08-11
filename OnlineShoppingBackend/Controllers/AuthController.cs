@@ -38,7 +38,7 @@ namespace OnlineShoppingBackend.Controllers
         /// <param name="loginDetails"></param>
         /// <returns></returns>
 
-        [HttpPost("Login/user"), AllowAnonymous]
+        [HttpPost("Login"), AllowAnonymous]
         public IActionResult Authenticate(Login loginDetails)
         {
             var user = _User.Find(x => x.LoginId == loginDetails.loginId).FirstOrDefault();
